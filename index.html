@@ -1,0 +1,427 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="./stlye.css">
+  <link rel="stylesheet" href="./amit.js">
+
+  
+
+<style>
+body {
+  font-family: 'Times New Roman', Times, serif;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: lighter;
+}
+
+.overlay {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: rgb(255, 255, 255);
+  background-color: rgba(247, 243, 243, 0.9);
+  overflow-x: hidden;
+  transition: 0.5s;
+}
+
+.overlay-content {
+  position: relative;
+  top: 25%;
+  width: 100%;
+  text-align: center;
+  margin-top: 30px;
+}
+
+.overlay a {
+  padding: 8px;
+  text-decoration: none;
+  font-size: 20px;
+  color: #ffffff;
+  display: block;
+  transition: 0.3s;
+}
+
+.overlay a:hover, .overlay a:focus {
+  color: #f1f1f1;
+}
+
+.overlay .closebtn {
+  position: absolute;
+  top: 20px;
+  right: 45px;
+  font-size: 20px;
+}
+
+@media screen and (max-height: 450px) {
+  .overlay a {font-size: 20px}
+  .overlay .closebtn {
+  font-size: 20px;
+  top: 15px;
+  right: 35px;
+  }
+  
+}
+
+
+</style>
+</head>
+<body>
+
+<!--====== Header Section Start ======-->
+<header>
+  <nav class="navigation">
+
+    <!-- Logo -->
+    <div class="logo">
+      <a href="#" class="logo">
+        <img src="./images/arilyd.png" alt="Arilyd & Associates">
+      </a>
+    </div>
+    
+    <!-- Navigation -->
+    <ul class="menu-list">
+      <li><a href="./index.html">Home</a></li>
+      <li><a href="./about us.html">About</a></li>
+      <li><a href="./services.html">Services</a></li>
+      <li><a href="./Blogs.html">Blogs</a></li>
+      <li><a href="./contact us.html">Contact</a></li>
+    </ul>
+
+    <div class="humbarger">
+      <div class="bar"></div>
+      <div class="bar2 bar"></div>
+      <div class="bar"></div>
+    </div>
+  </nav>
+  
+  <!-- ==== Intro Section Start ==== -->
+  <div class="intro-section" id="home">
+    <img src="./images/hero final.jpeg" style="width:100%" height="500">
+    <div class="intro-content">
+      <h1></h1>
+      <h6></h6>
+      
+      <p class="tagline">
+        <span class="change-container">
+          <span class="changing">ARILYD AND ASSOCIATES</span>
+          <span class="changing">Your Financial </span>
+          <span class="changing">solution</span>
+          <span class="changing">get what you want</span>
+          <span class="changing">how you want it</span>
+          <span class="changing">when you want it</span>
+        </span>
+      </p>
+
+      <div class="header-btn animated bounceIn">
+        <a href="#contact"><span>GET STARTED</span></a>
+      </div>
+      <!-- social media -->
+    </div>
+  </div>	
+</header>
+       
+
+<script>
+$(document).ready(function(){
+
+//hamburger Toggle
+$('.humbarger').click(function(event){
+$('.menu-list').slideToggle(500);
+event.preventDefault();
+
+$('.menu-list li a').click(function(event) {
+    if ($(window).width() < 768) {
+      $('.menu-list').slideUp(500);
+      event.preventDefault(); 
+    }
+  });
+});
+
+});
+</script>
+          </div>
+        </div>
+        
+      </ul>
+    </div>
+  </nav>
+
+  <style>
+
+body {
+    line-height: 1;
+}
+
+ol, ul {
+    list-style: none;
+}
+
+blockquote, q {
+    quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+    content: '';
+    content: none;
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+
+    * {box-sizing: border-box}
+    body {font-family: Verdana, sans-serif; margin:0}
+    .mySlides {display: none}
+    img {vertical-align: middle;}
+    
+    /* Slideshow container */
+    .slideshow-container {
+      max-width: cover;
+      position: relative;
+      margin: auto;
+    }
+    
+    /* Next & previous buttons */
+    .prev, .next {
+      cursor: pointer;
+      position: absolute;
+      top: 50%;
+      width: auto;
+      padding: 16px;
+      margin-top: -22px;
+      color: white;
+      font-weight: bold;
+      font-size: 18px;
+      transition: 0.6s ease;
+      border-radius: 0 3px 3px 0;
+      user-select: none;
+      
+    }
+    
+    /* Position the "next button" to the right */
+    .next {
+      right: 0;
+      border-radius: 3px 0 0 3px;
+    }
+    
+    /* On hover, add a black background color with a little bit see-through */
+    .prev:hover, .next:hover {
+      background-color: rgba(0,0,0,0.8);
+    }
+    
+    /* Caption text */
+    .text {
+      color: #f2f2f2;
+      font-size: 15px;
+      padding: 8px 12px;
+      position: absolute;
+      bottom: 8px;
+      width: 100%;
+      text-align: center;
+    }
+    
+    /* Number text (1/3 etc) */
+    .numbertext {
+      color: #f2f2f2;
+      font-size: 12px;
+      padding: 8px 12px;
+      position: absolute;
+      top: 0;
+    }
+    
+    /* The dots/bullets/indicators */
+    .dot {
+      cursor: pointer;
+      height: 15px;
+      width: 15px;
+      margin: 0 2px;
+      background-color: #bbb;
+      border-radius: 50%;
+      display: inline-block;
+      transition: background-color 0.10s ease;
+    }
+    
+    .active, .dot:hover {
+      background-color: #1a088e;
+    }
+    
+    /* Fading animation */
+    .fade {
+      animation-name: fade;
+      animation-duration: 1.5s;
+    }
+    
+    @keyframes fade {
+      from {opacity: .4} 
+      to {opacity: 1}
+    }
+    
+@media screen and (max-width: 600px) {
+  .topnav a:not(:first-child) {display: none;}
+  .topnav a.icon {
+    float: right;
+    display: block;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .navbar {position: relative;}
+  .nav-links {
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+  .topnav.responsive a {
+    float: none;
+    display: block;
+    text-align: left;
+  }
+}
+
+    /* On smaller screens, decrease text size */
+    @media only screen and (max-width: 300px) {
+      .prev, .next,.text {font-size: 11px}
+
+    }
+    </style>
+    
+  <section class="our-values">
+    <h2>OUR VALUES</h2>
+    <div class="container">
+      <div class="values-wrapper">
+        <div class="value">
+          <img src="./images/our value icon (2).png" alt="Value 1">
+          <h3> Empowerment</h3>
+          <p>Experience the Difference with Arilyd & Associates: Tailored Accounting Solutions 
+              for Your Financial Success. From Taxation to Auditing, Business Development to
+              Payroll Management, We're Here to Empower Your Journey Towards Prosperity..</p>
+        </div>
+        <div class="value">
+          <img src="./images/icon2.png" alt="Value 2">
+          <h3>Visionary </h3>
+          <p>Arilyd & Associates: Your Strategic Partner for Business Growth and Financial Excellence.
+             With a Comprehensive Suite of Services, Including Taxation, Auditing, and Business
+              Development, We're Committed to Unlocking Your Company's Full Potential..</p>
+        </div>
+        <div class="value">
+          <img src="./images/icon3.png" alt="Value 3">
+          <h3>Success </h3>
+          <p>Welcome to Arilyd & Associates, Where Precision Meets Innovation in Accounting and Business
+             Solutions. From Expert Taxation Services to Streamlined Payroll Management and Comprehensive
+             Business Development Support, Trust Us to Go Beyond Numbers and Drive Your Success.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="whats-different">
+    <h2>What's Different About Arilyd & Associates</h2>
+    <div class="cards">
+      <div class="different-points">
+        <div class="point">
+          <h3>VISIONARY</h3>
+          <p>Arilyd & Associates understand that timely information is often the single most valuable
+             weapon in any organization's management. Towards this end we ensure our clients realize 
+             their business vision by us offering time-bound, high-quality and cost effective
+             solutions.</p>
+        </div>
+        <div class="point">
+          <h3>PROFESSIONALISM</h3>
+          <p>By combining our expertise, experience and energy, each client receives close personal
+             and professional attention. Our high standards, service and specialized staff spell the
+              difference between our outstanding performance, and other firms. We make sure that
+              every client is served by the expertise of our whole firm</p>
+        </div>
+        <div class="point">
+          <h3>QUALITY</h3>
+          <p>An accounting firm is known for the quality of its service. Our firm's reputation
+             reflects the high standards we demand of ourselves. Our primary goal as a trusted
+              advisor is to be available to provide insightful advice to enable our clients to
+              make informed financial decisions</p>
+        </div>
+        <div class="point">
+          <h3>PARTNERSHIP</h3>
+          <p>Arilyd & Associates believe in partnering approach strategy in our delivery process.
+             We understand our clients' business through consultation, transformation and management.
+             Through this we turn our clients' vision into value driven results. Through this we
+             create lasting profitable customer relationships at lower costs</p>
+        </div>
+        <div class="point">
+          <h3>RELIABILITY</h3>
+          <p>Arilyd & Associates strive to provide our clients the best of the skills available. 
+            To achieve this we hire and retain talented professionals in the respective areas. 
+            We have assembled a very competent team of fully qualified professional accountants
+            with vast experience in internal audit, accountancy, project management, value for 
+            money audits, risk based audits and excellent reporting skills</p>
+        </div>
+        <div class="point">
+          <h3>RESPONSVE</h3>
+          <p>Our firm is responsive. Companies who choose our firm rely on competent advice and fast, 
+            accurate personnel. We provide total financial services to individuals, large and small 
+            businesses and other agencies</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-menu">
+        <h3>Quick Links</h3>
+        <ul>
+          <li><a href="./index.html">Home</a></li>
+          <li><a href="./about us.html">About Us</a></li>
+          <li><a href="./services.html">Services</a></li>
+          <li><a href="./Blogs.html">Blogs</a></li>
+          <li><a href="./contact us.html">Contact</a></li>
+        </ul>
+      </div>
+      <div class="footer-info">
+        <h3>Contact Us</h3>
+        <p>Email: info@arilydassociates.com</p>
+        <p>Phone: +254 746 888 398 <br>          +254743913808</p>
+        <p>Address: Aqua Plaza, Nairobi, along muranga road, Ngara</p>
+      </div>
+      <div class="footer-social">
+        <h3>Follow Us</h3>
+        <div class="social-links">
+          <a href="./images/insta.png"><i class="https://web.facebook.com/?_rdc=1&_rdr"></i></a>
+          <a href="./images/fb.png"><i class="https://web.facebook.com/?_rdc=1&_rdr"></i></a>
+          <a href="#"><i class="fab fa-instagram"></i></a>
+        </div>
+      </div>
+    </div>
+
+    <!-- CSS styles for button -->
+    <style>
+      .whatsapp-button {
+          background-color: #25D366; /* WhatsApp green */
+          color: white;
+          padding: 10px 20px;
+          border: none;
+          border-radius: 5px;
+          font-size: 16px;
+          cursor: pointer;
+          text-decoration: none;
+          position: right;
+          position: static;
+          
+      }
+  </style>
+
+  <!-- WhatsApp Chat Button -->
+  <a href="https://wa.me/+254 746 888398" class="whatsapp-button">Chat on WhatsApp</a>
+The following was to be concluded on this as per the people were saying 
+  </footer>
+    
+<script src="./script.js"></script>
+</body>
+</html>
